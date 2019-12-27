@@ -7,19 +7,25 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:component-scan base-package="ru.petrushkin"/>
 
-    <bean id="musicBean"
-          class="ru.petrushkin.ClassicalMusic">
-    </bean>
 
-    <bean id = "musicPlayer"
-          class = "ru.petrushkin.MusicPlayer"
-          scope="prototype">
-        <property name="music" ref="musicBean"/>
+    <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
 
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+<!--    <bean id="musicBean"-->
+<!--          class="ru.petrushkin.ClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy"-->
+<!--          factory-method="getClassicalMusic">-->
+<!--    </bean>-->
+
+<!--    <bean id = "musicPlayer"-->
+<!--          class = "ru.petrushkin.MusicPlayer"-->
+<!--          scope="prototype">-->
+<!--        <property name="music" ref="musicBean"/>-->
+
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--    </bean>-->
 
 </beans>
