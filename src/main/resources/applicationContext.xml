@@ -14,7 +14,8 @@
     </bean>
 
     <bean id = "musicPlayer"
-          class = "ru.petrushkin.MusicPlayer">
+          class = "ru.petrushkin.MusicPlayer"
+          scope="prototype">
         <property name="music" ref="musicBean"/>
 
         <property name="name" value="${musicPlayer.name}"/>
